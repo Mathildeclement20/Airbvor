@@ -16,6 +16,14 @@
   padding: 10px, 10px;
 }
 
-.navbar-nav > a {
+.navbar-nav {
+  a {
     padding: 10px 10px;
+    text-decoration: none;
+    color: #0D0D0D;
+  
+    &:hover {
+    color: #F2A172;
+    }
+  }
 }
