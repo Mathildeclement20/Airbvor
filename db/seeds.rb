@@ -1,26 +1,26 @@
-# User.destroy_all
 Animal.destroy_all
+User.destroy_all
 
-# User.create!(
-#   username: "Mathou",
-#   email: "mathou@lewagon.com",
-#   password: "password"
-# )
-# User.create!(
-#   username: "Jéremy",
-#   email: "jerem@lewagon.com",
-#   password: "password"
-# )
-# User.create!(
-#   username: "Yanis",
-#   email: "yanis@lewagon.com",
-#   password: "password"
-# )
-# User.create!(
-#   username: "Seryl",
-#   email: "seryl@lewagon.com",
-#   password: "password"
-# )
+User.create!(
+  username: "Mathou",
+  email: "mathou@lewagon.com",
+  password: "password"
+)
+User.create!(
+  username: "Jéremy",
+  email: "jerem@lewagon.com",
+  password: "password"
+)
+User.create!(
+  username: "Yanis",
+  email: "yanis@lewagon.com",
+  password: "password"
+)
+User.create!(
+  username: "Seryl",
+  email: "seryl@lewagon.com",
+  password: "password"
+)
 Animal.create!(
   user: User.find_by(username: "Mathou"),
   specie: "lapin",
