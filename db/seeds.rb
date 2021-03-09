@@ -1,26 +1,26 @@
-User.destroy_all
+# User.destroy_all
 Animal.destroy_all
 
-User.create!(
-  username: "Mathou",
-  email: "mathou@lewagon.com",
-  password: "password"
-)
-User.create!(
-  username: "Jéremy",
-  email: "jerem@lewagon.com",
-  password: "password"
-)
-User.create!(
-  username: "Yanis",
-  email: "yanis@lewagon.com",
-  password: "password"
-)
-User.create!(
-  username: "Seryl",
-  email: "seryl@lewagon.com",
-  password: "password"
-)
+# User.create!(
+#   username: "Mathou",
+#   email: "mathou@lewagon.com",
+#   password: "password"
+# )
+# User.create!(
+#   username: "Jéremy",
+#   email: "jerem@lewagon.com",
+#   password: "password"
+# )
+# User.create!(
+#   username: "Yanis",
+#   email: "yanis@lewagon.com",
+#   password: "password"
+# )
+# User.create!(
+#   username: "Seryl",
+#   email: "seryl@lewagon.com",
+#   password: "password"
+# )
 Animal.create!(
   user: User.find_by(username: "Mathou"),
   specie: "lapin",
@@ -48,7 +48,7 @@ Animal.create!(
 Animal.create!(
   user: User.find_by(username: "Seryl"),
   specie: "lama",
-  image_url: "assets/images/1615290447902827708591783064387[611].jpg",
+  image_url: "https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg",
   name: "Serge",
   description: "Aussi bon brouteur que chanteur, Serge ou Sergio (en portugais) vous proposera egalement un service de lavage de vitre.",
   price_per_day: 400
