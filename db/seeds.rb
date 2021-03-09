@@ -42,7 +42,7 @@ Animal.create!(
   specie: "escargot",
   image_url: "https://tse2.mm.bing.net/th?id=OIP.IJjzbq9zVI7JzpVY3vEweQHaD3&pid=Api&P=0&w=525&h=571",
   name: "Karlo",
-  description: "Lent mais consienscieux, il appliquera en bonus un lubrifiant naturel dont il à le secret (Karlo etant trés fragile une caution de 1000€ vous sera demandée )",
+  description: "Lent mais consienscieux, il appliquera en bonus un lubrifiant naturel dont il à le secret (Karlo etant trés fragile une caution de 1000€ vous sera demandée, merci de ne pas les écraser !)",
   price_per_day: 1000
 )
 Animal.create!(
