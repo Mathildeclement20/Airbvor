@@ -1,7 +1,37 @@
-<h3>Show</h3>
+<div class="container m-5">
 
-<h5><%= @animal.name %></h5>
-
-<p><%= @animal.description %></p>
-
-<%= link_to "Back home", animals_path  %>
+  <h3 style= "font-size: 29px;"><strong><%= @animal.name %></strong></h3>
+  <p style= "font-size: 17px;">Espéce: <%= @animal.specie %></p>
+  <img src="<%= @animal.image_url%>">
+  <div class="animal-description row">
+    <div class="animal-text col-6">
+      <h4>Description :</h4>
+      <p><%= @animal.description %></p>
+    </div>
+    <div class="col-5">
+      <p><%= @animal.price_per_day %>€/jours</p>
+      <div class="form-disponibility">
+        <h4><strong>Ajouter des dates pour voir le prix </strong></h4>
+        <form action="" method="get">
+          <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
+            <input type="number" placeholder="Nombres de jours" class="form-control mb-2" id="">  
+            <input type="date" name="" id="" class="mb-2">
+            <input  type="submit" value="Vérifier les disponibilités" class="my-button">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div style="width: 100%; height: 2px; background-color: grey; margin-top: 30px"></div>
+  <h4 style="margin-top: 35px"><strong>Aucun commentaire (pour l'instant)</strong></h4>
+  <div class="info-review row  ">
+    <div class= "col-6 row mt-5 d-flex align-items-center">
+      <%= image_tag "Lapin_picto-01", class: "col-3" %>
+      <p class="col-8" style="padding: 0px;">Cet hôte a 81 commentaires concernant d'autres airbivor. Afficher d'autres commentaires.</p>
+    </div>
+    <div class= "col-6 row mt-5 d-flex align-items-center">
+      <%= image_tag 'bave_picto-03', class: "col-3 p-0" %>
+      <p class="col-8" style="padding: 0px;">Nous sommes là pour vous aider. Chaque réservation est couverte par la bave de Karlo et la glaire de Serge.</p>
+    </div>
+  </div>
+</div>

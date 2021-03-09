@@ -1,0 +1,13 @@
+.my-button{
+  padding: 10px 25px;
+  border-radius: 8px;
+  // width: 70%;
+  border: none;
+  font-weight: bold;
+  // margin-left: 15%;
+  &:hover{
+    transition: 0.5s;
+    background-color: #F2A172;
+  }
+
+}
