@@ -1,0 +1,17 @@
+.my-button{
+  padding: 10px 25px;
+  border-radius: 8px;
+  // width: 70%;
+  border: none;
+  font-weight: bold;
+  // margin-left: 15%;
+  &:hover{
+    transition: 0.5s;
+    background-color: #214031;
+    color: white;
+    box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
+    webkit-box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
+    moz-box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
+  }
+
+}
