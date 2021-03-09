@@ -6,8 +6,11 @@
   <div class="animal-description row">
     <div class="animal-text col-6">
       <h4>Description :</h4>
-      <p><%= @animal.description %></p>
+      <p style="text-align: justify;"><%= @animal.description %> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dignissimos necessitatibus, rerum accusantium aliquid quia repellat quas itaque veritatis iure minus. Distinctio numquam excepturi nobis sapiente nulla ex in delectus.
+      Animi possimus autem ducimus iure maiores asperiores sapiente officia illo corporis? Ratione, ad eligendi doloribus provident consequuntur odio molestias minima perferendis est obcaecati exercitationem consequatur veritatis culpa nostrum voluptatem sapiente!
+      Dignissimos magnam distinctio molestias facilis earum eos aut, asperiores eius culpa, suscipit alias vel fugit quibusdam deserunt quaerat omnis laboriosam saepe cum autem consequuntur fuga mollitia, vitae quam quo. Totam.</p>
     </div>
+    <div class="col-1"></div>
     <div class="col-5">
       <p><%= @animal.price_per_day %>€/jours</p>
       <div class="form-disponibility">
@@ -34,4 +37,22 @@
       <p class="col-8" style="padding: 0px;">Nous sommes là pour vous aider. Chaque réservation est couverte par la bave de Karlo et la glaire de Serge.</p>
     </div>
   </div>
+  <div class="map">
+  </div>
+  <hr>
+  <h4 class="mt-4"><strong>Autres Lapin Airbivor</strong></h4>
+  <div class="cards mt-3">
+    <% @animals.each do |animal| %>
+      <% unless animal.id == @animal.id %>
+        <%= link_to animal_path(animal) do  %>
+          <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= animal.image_url%>')">
+            <%= animal.name %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+
+
 </div>

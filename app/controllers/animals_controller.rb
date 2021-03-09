@@ -7,5 +7,6 @@ class AnimalsController < ApplicationController
 
   def show
     @animal = Animal.find(params[:id])
+    @animals = Animal.where(specie: @animal.specie).limit(4)
   end
 end
