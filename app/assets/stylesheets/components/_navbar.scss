@@ -10,3 +10,12 @@
 .navbar-lewagon .navbar-brand img {
   width: 130px;
 }
+
+.navbar-align {
+  text-align: -webkit-match-parent;
+  padding: 10px, 10px;
+}
+
+.navbar-nav > a {
+    padding: 10px 10px;
+}
