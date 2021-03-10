@@ -7,12 +7,12 @@
   <button type="button" class="btn btn-light btn-lg">Lama</button>
 </div>
 
-<div class="container">
-  <div class="col-6">
-    <div class="d-flex justify-content-around">
+<div class="container d-flex flex-row">
+  <div class="col-6 ">
+
     <% @animals.each do |animal| %>
       <%= link_to animal_path(animal) do %>
-      <div class="p-2">
+      <div class="d-flex justify-content-around p-2">
         <p class="d-flex justify-content-center"><%= animal.name %></p>
         <% unless animal.photos.empty? %>
           <%= cl_image_tag animal.photos.first.key, height: 200, width: 300, crop: :fill %>
@@ -21,6 +21,10 @@
       <% end %>
     <% end %>
 
-    </div>
+
+  </div>
+  <div class="col-6">
+
   </div>
 </div>
+
