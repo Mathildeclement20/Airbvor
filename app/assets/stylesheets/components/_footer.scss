@@ -1,0 +1,62 @@
+footer {
+  border-top: 1px dashed #0D0D0D;
+  width: 100%;
+  color: #0D0D0D;
+  background: #EBEBF2;
+}
+
+footer a {
+  color: black;
+}
+
+.content-footer {
+  width: 1000px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  padding: 20px 0 30px;
+}
+
+.bloc {
+  width: 25%;
+  margin: 0 10px;
+}
+
+.footer-about h3,
+.footer-engagements h3,
+.footer-assistance h3,
+.footer-follow h3 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  align-content: center;
+  color: #214031;
+}
+
+
+.list-about,
+.list-engagements,
+.list-assistance,
+.list-follow {
+  list-style-type: none;
+  color: #0D0D0D;
+
+  a:hover {
+    color: #F2A172;
+  }
+}
+
+.list-about li,
+.list-engagements li,
+.list-assistance li,
+.list-follow li {
+  text-decoration: none;
+  color: #0D0D0D;
+  font-size: 14px;
+}
+
+.list-about {
+  padding: 2px 0;
+}

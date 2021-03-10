@@ -8,4 +8,10 @@ class Animal < ApplicationRecord
   validates :description, presence: true
   validates :price_per_day, presence: true
   # validates :image_url, presence: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
+  def self.species
+    return SPECIES
+  end
 end
