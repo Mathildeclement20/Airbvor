@@ -1,3 +1,4 @@
+require 'open-uri'
 Animal.destroy_all
 User.destroy_all
 
@@ -29,6 +30,13 @@ Animal.create!(
   description: "Rongeur de compétition, tondre c'est sa religion. Et il fait ça avec passion !",
   price_per_day: 25
 )
+file = URI.open("https://cdn.pixabay.com/photo/2018/12/08/22/00/rabbit-3864120_1280.jpg") 
+Animal.last.photos.attach(io: file, filename: "rabbit1.jpg", content_type: 'image/jpg' )
+file = URI.open("https://cdn.pixabay.com/photo/2016/12/13/00/13/rabbit-1903016_1280.jpg") 
+Animal.last.photos.attach(io: file, filename: "rabbit2.jpg", content_type: 'image/jpg' )
+file = URI.open("https://cdn.pixabay.com/photo/2019/07/31/19/21/hare-4375952_1280.jpg") 
+Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+
 Animal.create!(
   user: User.find_by(username: "Jéremy"),
   specie:"vegan",
@@ -37,6 +45,13 @@ Animal.create!(
   description: "Pomme est une vegane accomplie, brouter est sa destinée.",
   price_per_day: 5
 )
+file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg") 
+Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg") 
+Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg") 
+Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+
 Animal.create!(
   user: User.find_by(username: "Yanis"),
   specie: "escargot",
