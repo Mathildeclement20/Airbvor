@@ -40,6 +40,7 @@ Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'imag
 Animal.create!(
   user: User.find_by(username: "Jéremy"),
   specie:"vegan",
+  address:"",
   image_url:"https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg",
   name: "Pomme",
   description: "Pomme est une vegane accomplie, brouter est sa destinée.",
@@ -62,7 +63,7 @@ Animal.create!(
   price_per_day: 1000
 )
 file = URI.open("https://tse2.mm.bing.net/th?id=OIP.IJjzbq9zVI7JzpVY3vEweQHaD3&pid=Api&P=0&w=525&h=571")
-Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+Animal.last.photos.attach(io: file, filename: "escargot1.jpg", content_type: 'image/jpg' )
 
 Animal.create!(
   user: User.find_by(username: "Seryl"),
@@ -73,7 +74,7 @@ Animal.create!(
   price_per_day: 400
 )
 file = URI.open("https://idata.over-blog.com/1/50/49/04//Lama.jpg")
-Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+Animal.last.photos.attach(io: file, filename: "lama1.jpg", content_type: 'image/jpg' )
 
 Animal.create!(
   user: User.find_by(username: "Mathou"),
@@ -84,4 +85,4 @@ Animal.create!(
   price_per_day: 43
 )
 file = URI.open("https://animalequality.org/app/uploads/2014/04/patrik-herbe.jpg")
-Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+Animal.last.photos.attach(io: file, filename: "vegan4.jpg", content_type: 'image/jpg' )

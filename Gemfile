@@ -34,7 +34,8 @@ gem 'geocoder'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
-group :development, :test do  gem 'pry-byebug'
+group :development, :test do  
+  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
