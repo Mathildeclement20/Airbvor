@@ -46,11 +46,11 @@ Animal.create!(
   price_per_day: 5
 )
 file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg") 
-Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+Animal.last.photos.attach(io: file, filename: "vegan1.jpg", content_type: 'image/jpg' )
 file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg") 
-Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+Animal.last.photos.attach(io: file, filename: "vegan2.jpg", content_type: 'image/jpg' )
 file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg") 
-Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+Animal.last.photos.attach(io: file, filename: "vegan3.jpg", content_type: 'image/jpg' )
 
 Animal.create!(
   user: User.find_by(username: "Yanis"),
