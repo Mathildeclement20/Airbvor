@@ -28,6 +28,8 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
+# Gemfile
+gem 'geocoder'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
