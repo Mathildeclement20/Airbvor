@@ -7,6 +7,7 @@ footer {
 
 footer a {
   color: black;
+  width: auto;
 }
 
 .content-footer {
@@ -17,12 +18,13 @@ footer a {
   justify-content: center;
   align-items: flex-start;
   font-size: 20px;
-  padding: 20px 0 30px;
+  padding: 20px 0px 30px;
 }
 
 .bloc {
   width: 25%;
   margin: 0 10px;
+  padding: auto;
 }
 
 .footer-about h3,
@@ -31,10 +33,8 @@ footer a {
 .footer-follow h3 {
   font-size: 20px;
   padding-bottom: 20px;
-  align-content: center;
   color: #214031;
 }
-
 
 .list-about,
 .list-engagements,
@@ -42,7 +42,7 @@ footer a {
 .list-follow {
   list-style-type: none;
   color: #0D0D0D;
-
+  padding-left: 2px;
   a:hover {
     color: #F2A172;
   }
@@ -52,11 +52,8 @@ footer a {
 .list-engagements li,
 .list-assistance li,
 .list-follow li {
+  width: auto;
   text-decoration: none;
   color: #0D0D0D;
   font-size: 14px;
-}
-
-.list-about {
-  padding: 2px 0;
 }
