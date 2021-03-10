@@ -1,10 +1,11 @@
 <div class="container m-5">
-
+  <p><%= link_to animals_path do %> <i class="fas fa-frog" style="color: tomato"> Back </i> <% end %>
+  </p>
   <h3 style= "font-size: 29px;"><strong><%= @animal.name %></strong></h3>
   <p style= "font-size: 17px;">Espéce: <%= @animal.specie %></p>
   <%#= CAROUSSEL  %>
   <div class="show-img row mb-5" style="position: relative;">
-    <p style="font-size: 45px; position: absolute; z-index:5; bottom: 5px; right: 10px; background-color: #2E5945;  ">
+    <p style="font-size: 45px; position: absolute; z-index:5; bottom: 5px; right: 10px;padding: 0px 10px; background-color: #2E5945; opacity: 0.9;">
       <%= @animal.price_per_day %>€/jours
     </p>
     <div id="carouselExemple" class="carousel slide col-7" style="width: 700px; height: 400px" data-ride="carousel" data-interval="2000">
