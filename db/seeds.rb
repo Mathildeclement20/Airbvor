@@ -30,11 +30,11 @@ Animal.create!(
   description: "Rongeur de compétition, tondre c'est sa religion. Et il fait ça avec passion !",
   price_per_day: 25
 )
-file = URI.open("https://cdn.pixabay.com/photo/2018/12/08/22/00/rabbit-3864120_1280.jpg") 
+file = URI.open("https://cdn.pixabay.com/photo/2018/12/08/22/00/rabbit-3864120_1280.jpg")
 Animal.last.photos.attach(io: file, filename: "rabbit1.jpg", content_type: 'image/jpg' )
-file = URI.open("https://cdn.pixabay.com/photo/2016/12/13/00/13/rabbit-1903016_1280.jpg") 
+file = URI.open("https://cdn.pixabay.com/photo/2016/12/13/00/13/rabbit-1903016_1280.jpg")
 Animal.last.photos.attach(io: file, filename: "rabbit2.jpg", content_type: 'image/jpg' )
-file = URI.open("https://cdn.pixabay.com/photo/2019/07/31/19/21/hare-4375952_1280.jpg") 
+file = URI.open("https://cdn.pixabay.com/photo/2019/07/31/19/21/hare-4375952_1280.jpg")
 Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
 
 Animal.create!(
@@ -45,6 +45,7 @@ Animal.create!(
   description: "Pomme est une vegane accomplie, brouter est sa destinée.",
   price_per_day: 5
 )
+
 file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg") 
 Animal.last.photos.attach(io: file, filename: "vegan1.jpg", content_type: 'image/jpg' )
 file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg") 
@@ -60,6 +61,9 @@ Animal.create!(
   description: "Lent mais consienscieux, il appliquera en bonus un lubrifiant naturel dont il à le secret (Karlo etant trés fragile une caution de 1000€ vous sera demandée, merci de ne pas les écraser !)",
   price_per_day: 1000
 )
+file = URI.open("https://tse2.mm.bing.net/th?id=OIP.IJjzbq9zVI7JzpVY3vEweQHaD3&pid=Api&P=0&w=525&h=571")
+Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+
 Animal.create!(
   user: User.find_by(username: "Seryl"),
   specie: "lama",
@@ -68,6 +72,9 @@ Animal.create!(
   description: "Aussi bon brouteur que chanteur, Serge ou Sergio (en portugais) vous proposera egalement un service de lavage de vitre.",
   price_per_day: 400
 )
+file = URI.open("https://idata.over-blog.com/1/50/49/04//Lama.jpg")
+Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
+
 Animal.create!(
   user: User.find_by(username: "Mathou"),
   specie: "vegan",
@@ -76,3 +83,5 @@ Animal.create!(
   description:"Spécialiste des grands espaces, il deploiera tout son potentiel aprés ingurgitation de son met favoris 'Le Boulghour'",
   price_per_day: 43
 )
+file = URI.open("https://animalequality.org/app/uploads/2014/04/patrik-herbe.jpg")
+Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'image/jpg' )
