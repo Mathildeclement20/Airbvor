@@ -8,4 +8,7 @@ class Animal < ApplicationRecord
   validates :description, presence: true
   validates :price_per_day, presence: true
   # validates :image_url, presence: true
+  def self.species
+    return SPECIES
+  end
 end
