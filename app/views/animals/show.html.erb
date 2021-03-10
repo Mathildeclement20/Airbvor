@@ -1,18 +1,52 @@
 <div class="container m-5">
-
+  <p><%= link_to animals_path do %> <i class="fas fa-frog" style="color: tomato"> Back </i> <% end %>
+  </p>
   <h3 style= "font-size: 29px;"><strong><%= @animal.name %></strong></h3>
   <p style= "font-size: 17px;">Espéce: <%= @animal.specie %></p>
-  <img src="<%= @animal.image_url%>">
-  <div class="animal-description row">
-    <div class="animal-text col-6">
-      <h4>Description :</h4>
+  <%#= CAROUSSEL  %>
+  <div class="show-img row mb-5" style="position: relative;">
+    <p style="font-size: 45px; position: absolute; z-index:5; bottom: 5px; right: 10px;padding: 0px 10px; background-color: #2E5945; opacity: 0.9;">
+      <%= @animal.price_per_day %>€/jours
+    </p>
+    <div id="carouselExemple" class="carousel slide col-7" style="width: 700px; height: 400px" data-ride="carousel" data-interval="2000">
+      <div class="carousel-inner">
+        <% @animal.photos.each do |photo| %>
+          <% if photo == @animal.photos.first  %>
+            <div class="carousel-item active">
+              <%= cl_image_tag photo.key, height: 400, width: 700, crop: :fill %>
+            </div>
+          <% else %>
+            <div class="carousel-item">
+              <%= cl_image_tag photo.key, height: 400, width: 700, crop: :fill %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <a href="#carouselExemple" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a href="#carouselExemple" class="carousel-control-next" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="pictures col-5">
+      <% @animal.photos.each do |animal| %>
+        <%= cl_image_tag animal.key, height: 200, width: 170, crop: :fill, class: "mb-1" %>
+      <% end %>
+    </div>
+  </div>
+  <%#= FIN DU CAROUSSEL %>
+  <div class="animal-description row"> 
+    <div class="animal-text col-6" style= "position: relative;">
+      <h4>Description :</h4><p style="position: absolute; right: -50px; top: -20px;"><%=image_tag "avatar", class: "avatar-large", height: 50%></p>
       <p style="text-align: justify;"><%= @animal.description %> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dignissimos necessitatibus, rerum accusantium aliquid quia repellat quas itaque veritatis iure minus. Distinctio numquam excepturi nobis sapiente nulla ex in delectus.
       Animi possimus autem ducimus iure maiores asperiores sapiente officia illo corporis? Ratione, ad eligendi doloribus provident consequuntur odio molestias minima perferendis est obcaecati exercitationem consequatur veritatis culpa nostrum voluptatem sapiente!
       Dignissimos magnam distinctio molestias facilis earum eos aut, asperiores eius culpa, suscipit alias vel fugit quibusdam deserunt quaerat omnis laboriosam saepe cum autem consequuntur fuga mollitia, vitae quam quo. Totam.</p>
     </div>
     <div class="col-1"></div>
     <div class="col-5">
-      <p><%= @animal.price_per_day %>€/jours</p>
       <div class="form-disponibility">
         <h4><strong>Ajouter des dates pour voir le prix </strong></h4>
         <form action="" method="get">
