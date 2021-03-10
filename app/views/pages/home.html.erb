@@ -1,2 +1,40 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="">
+    <div class="search-home" style="">
+      <form action="animals" class=" d-flex justify-content-center align-item-center" method="get">
+        <input type="date" name="" id="" class="">
+        <span></span>
+        <input type="number" placeholder="Nombres de jours" class="form-control" id="">
+        <span></span>
+            <select class="form-select" id="inputGroupSelect01">
+                <% Animal.species.each do |specie| %>
+                  <option value="1"><%= specie.capitalize %></option>
+                <% end %>
+            </select>
+            <button type="submit"><i class="fas fa-search" type="submit"></i></button>
+      </form>    
+    </div>          
+  </div>
+  <div class="margin-150"></div>
+  <div class="d-flex justify-content-center align-item-center mb-5" style="margin-right: auto">
+    <%= cl_image_tag("rongeurs-domestiques-110757-650-400_crv5pg",
+      width:900 , height: 400, crop: :fill) %>
+  </div>
+    <div class="container text-home">
+    <h3>Qu’est ce qu’un Airbvor?</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus delectus laborum itaque quos earum a magnam enim aliquam! Amet quidem excepturi quia praesentium ullam labore tenetur maxime vero dolorem dolorum!
+    Deserunt iste tempore quam ea doloremque suscipit velit sequi beatae consequatur maiores, natus nesciunt, illum modi sapiente alias. Natus deleniti voluptatum voluptates quidem assumenda cum laborum vero iure ipsam vel!
+    Ex expedita dignissimos id mollitia perferendis sequi, minima optio corrupti corporis nobis inventore temporibus laudantium vitae atque dolores beatae exercitationem? Pariatur explicabo obcaecati officia nulla eius dignissimos provident placeat dolor!
+    Pariatur, dolorum doloribus autem, sit vitae quod et id unde eveniet omnis nisi in? Eveniet, aut quo sapiente delectus modi explicabo enim sit repellendus rem perspiciatis ullam quisquam totam rerum.
+    Perferendis error dignissimos voluptas, perspiciatis dolor enim! Quidem eos eaque possimus eum distinctio tempore error officiis laborum? Sunt nostrum atque quia ipsa repellendus hic adipisci a consectetur odit ab. Magnam.
+    </p>
+    <h3 class="mt-4"> <strong>Nos utilisateurs ont aimé…</strong></h3>
+  </div>
+  <div class="d-flex justify-content-center align-item-center mb-4">
+      <%= cl_image_tag("rongeurs-domestiques-110757-650-400_crv5pg",
+      width:400 , height: 350, crop: :fill) %>
+      <div class="col-1"></div>
+      <%= cl_image_tag("rongeurs-domestiques-110757-650-400_crv5pg",
+      width:400 , height: 350, crop: :fill) %>
+    </div>
+</div>
