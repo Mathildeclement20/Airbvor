@@ -1,14 +1,16 @@
 <div class="container">
   <div class="">
     <div class="search-home" style="">
-      <form action="animals" class=" d-flex justify-content-center align-item-center" method="get">
-        <input type="date" name="" id="" class="">
+      <form action="animals/find" class=" d-flex justify-content-center align-item-center" method="get">
+        <input type="date" name="date" id="date" class="">
         <span></span>
-        <input type="number" placeholder="Nombres de jours" class="form-control" id="">
+        <input type="number" placeholder="Nombres de jours" name="duration" class="form-control" id="">
         <span></span>
-            <select class="form-select" id="inputGroupSelect01">
+            <select class="form-select" id="inputGroupSelect01" name="specie">
+                <% i = 0  %>
                 <% Animal.species.each do |specie| %>
-                  <option value="1"><%= specie.capitalize %></option>
+                  <option value="<%= i%>"><%= specie.capitalize %></option>
+                  <% i = i + 1 %>
                 <% end %>
             </select>
             <button type="submit"><i class="fas fa-frog" type="submit"></i></button>
