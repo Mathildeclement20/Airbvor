@@ -45,6 +45,9 @@
       transition: 0.6s;
       background-color: white;
     }
+    &:active{
+      border: none;
+    }
   }
   button{
     background-color: #2E5945;
