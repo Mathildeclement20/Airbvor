@@ -31,7 +31,8 @@ class AnimalsController < ApplicationController
       {
         lat: animal.latitude,
         lng: animal.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { animal: animal })
+        infoWindow: render_to_string(partial: "info_window", locals: { animal: animal }),
+        image_url: helpers.asset_url('https://res.cloudinary.com/df310vkui/image/upload/v1615469621/PICTO/Logo_symbol_airbvor_Plan_de_travail_1_copie_2_r1jhba.png')
       }
     end
   end
