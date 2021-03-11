@@ -1,6 +1,11 @@
+.navbar {
+  display: flex;
+  position: relative;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: #F1F5F0;
+  background: #E4ECE4;
   z-index: 5;
 }
 
@@ -29,3 +34,4 @@
       color: #F2A172;
     }
 }
+

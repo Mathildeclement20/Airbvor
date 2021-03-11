@@ -1,12 +1,17 @@
-<div class="container m-5">
-  <p><%= link_to animals_path do %> <i class="fas fa-frog" style="color: tomato"> Back </i> <% end %>
-  </p>
-  <h3 style= "font-size: 29px;"><strong><%= @animal.name %></strong></h3>
-  <p style= "font-size: 17px;">Espèce: <%= @animal.specie %></p>
+<div class="container">
+  <div class="show-airbvor">
+      <div class="text-presentation">
+        <h3 class="name-species"><strong><%= @animal.name %></strong></h3>
+        <p class="description">Espèce: <%= @animal.specie %>- âge : 2 ans - Sexe: male</p>
+        <%= @animal.price_per_day %>€/jours
+      </div>
+
+      <img src="https://res.cloudinary.com/df310vkui/image/upload/v1615408656/herbes-08_bbf4ih.png" class="image-gazon1">
+  </div>
   <%#= CAROUSSEL  %>
-  <div class="show-img row mb-5" style="position: relative;">
+  <div class="show-img" style="position: relative;">
     <p style="font-size: 45px; position: absolute; z-index:5; bottom: 5px; right: 10px;padding: 0px 10px; background-color: #2E5945; opacity: 0.9;">
-      <%= @animal.price_per_day %>€/jours
+
     </p>
   </div>
   <div class="row mb-5">
@@ -64,30 +69,49 @@
       </div>
     </div>
   </div>
+
+  <%#= ESPACE COMMENTAIRES %>
   <div style="width: 100%; height: 2px; background-color: grey; margin-top: 30px"></div>
   <h4 style="margin-top: 35px"><strong>Aucun commentaire (pour l'instant)</strong></h4>
-  <div class="info-review row  ">
-    <div class= "col-6 row mt-5 d-flex align-items-center">
-      <%= cl_image_tag("Lapin_picto-01_yx4vd7",
-      class: "col-3") %>
-      <p class="col-8" style="padding: 0px;">Cet hôte a 81 commentaires concernant d'autres airbivor. Afficher d'autres commentaires.</p>
+  <div class="info-review">
+    <!-- <div class= "col-6 row mt-5 d-flex align-items-center"> -->
+      <div class="lapin">
+        <img class="image-lapin" src="https://res.cloudinary.com/df310vkui/image/upload/v1615390831/Lapin_picto-01_yx4vd7.png" alt="pictogramme d'un lapin">
+        <p class="col-8" style="padding: 0px;">Cet hôte a 81 commentaires concernant d'autres airbivor. Afficher d'autres commentaires.</p>
+      </div>
+    <!-- <div class= "col-6 row mt-5 d-flex align-items-center"> -->
+      <div class="goutte">
+        <img class="image-goutte" src="https://res.cloudinary.com/df310vkui/image/upload/v1615390845/bave_picto-03_ajqnfe.png" alt="pictogramme de goutte d'eau">
+        <p class="text-goutte"> Nous sommes là pour vous aider. Chaque réservation est couverte par la bave de Karlo et la glaire de Serge.</p>
+      </div>
     </div>
-    <div class= "col-6 row mt-5 d-flex align-items-center">
-      <%= cl_image_tag("bave_picto-03_ajqnfe",
-      class: "col-3 p-0") %>
-      <p class="col-8" style="padding: 0px;">Nous sommes là pour vous aider. Chaque réservation est couverte par la bave de Karlo et la glaire de Serge.</p>
+    <div style="width: 100%; height: 2px; background-color: grey; margin-top: 30px"></div>
+  <div class="map"></div>
+
+<%#= ESPACE AUTRE AIRBIVOR %>
+  <h4 class="mt-4"><strong>D'autres Airbivors 💚</strong></h4>
+
+  <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/df310vkui/image/upload/v1615490353/Fashion-Llama-Paul-Fuentes-Impression-sur-toile_ctazqn.webp)">
+      Les Lamas
     </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/df310vkui/image/upload/v1615490452/escargots-02_ALTERN03_xb1dqx.jpg)">
+      Les Escargots
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/df310vkui/image/upload/v1615490552/min_image_ha4diy.jpg)">
+      Les Vegans
+    </div>
+
   </div>
-  <div class="map">
-  </div>
-  <hr>
-  <h4 class="mt-4"><strong>Autres Lapin Airbivor</strong></h4>
-  <div class="cards mt-3">
+
+ <div class="cards mt-3">
     <% @animals.each do |animal| %>
       <% unless animal.id == @animal.id %>
         <%= link_to animal_path(animal) do  %>
           <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= animal.image_url%>')">
-            <%= animal.name %>
+            <%= animal.name %> -->
           </div>
         <% end %>
       <% end %>

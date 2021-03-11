@@ -1,0 +1,111 @@
+.container {
+  width: 100vw;
+}
+
+.show-airbvor {
+  position: relative;
+  justify-content: space-between;
+}
+
+
+
+.name-species {
+  font-size: 40px;
+  color: #2E5945;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+
+}
+
+.text-presentation > .description{
+  font-size: 18px;
+  text-transform: uppercase;
+
+}
+
+.info-review {
+  display: flex;
+  justify-content:space-around;
+
+}
+
+.goutte {
+  display: flex;
+}
+
+.text-goutte {
+  text-align: left;
+  flex: 1;
+  font-size: 16px;
+
+}
+
+.image-goutte {
+width: 20px;
+height: auto;
+flex: 1;
+vertical-align:middle;
+
+}
+
+
+.lapin {
+  display: flex;
+}
+
+.text-lapin {
+  text-align: left;
+  flex: 1;
+  font-size: 16px;
+
+}
+
+.image-lapin {
+width: auto;
+height: 150px;
+flex: 1;
+vertical-align:middle;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding-top: 50px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
