@@ -1,8 +1,7 @@
 footer {
-  border-top: 1px #0D0D0D;
   width: 100%;
   color: #0D0D0D;
-  background: #F1F5F0;
+  background: #E4ECE4;
 }
 
 footer a {
@@ -12,13 +11,13 @@ footer a {
 
 .content-footer {
   width: 1000px;
-  height: 170px;
-  margin: 0 auto;
+  height: 180px;
+  margin: 0px auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   font-size: 20px;
-  padding: 20px 0px 0px;
+  padding: 40px 0px 0px;
 }
 
 .bloc {
@@ -65,3 +64,5 @@ footer a {
 #social-medias-yt {
   padding-right: 7px;
 }
+
+
