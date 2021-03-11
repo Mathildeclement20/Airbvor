@@ -1,0 +1,14 @@
+.tag-btn{
+  background-color:  #2E5945;
+  color: white;
+  box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
+  webkit-box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
+  moz-box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
+  border-radius: 15px;
+  font-weight: bold;
+  &:hover{
+    transition: 0.5s;
+    background-color: #214031;
+    color: #EBEBF2;
+  }
+}
