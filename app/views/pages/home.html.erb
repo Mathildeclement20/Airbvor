@@ -7,6 +7,7 @@
         <input type="number" placeholder="Nombres de jours" name="duration" class="form-control" id="">
         <span></span>
             <select class="form-select" id="inputGroupSelect01" name="specie">
+                <option value="10">All</option>
                 <% i = 0  %>
                 <% Animal.species.each do |specie| %>
                   <option value="<%= i%>"><%= specie.capitalize %></option>
