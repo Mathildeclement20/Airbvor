@@ -13,10 +13,15 @@ class AnimalsController < ApplicationController
   end
 
   def find
-    specie = Animal.species[params["specie"].to_i]
-    @animals = Animal.where(specie: specie)
-    set_markers
-    render :index
+    if params["specie"] == "10"
+      # @animals = Animal.all
+      redirect_to animals_path
+    else
+      specie = Animal.species[params["specie"].to_i]
+      @animals = Animal.where(specie: specie)
+      set_markers
+      render :index
+    end
   end
 
   private
