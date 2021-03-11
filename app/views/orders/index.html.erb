@@ -1,14 +1,22 @@
 <div class="margin-150"></div>
-<h1>Bonjour <%= current_user.username %></h1>
-<h2>My animal</h2>
-  <% current_user.animals.each do |animal| %>
-    <%= cl_image_tag(animal.photos[0].key,
-      width:500 , height: 300, crop: :fill) %>
-    <h4><%= animal.name %></h4>
-    <p><%= animal.specie %></p>
+<div class="container m-5">
+  <div class="info-profile mt-5 d-flex">
+     <%= cl_image_tag("7d0rmde6zovr3vpuxkp3odl1y54s", width:150 , height: 150, crop: :fill, radius: "max",style: "border-radius: 50%;") %>
+    <h1>Bonjour <%= current_user.username %></h1>
+  </div>
+    <h2>My animal</h2>
+    <div class= "img-animal-profil">
+      <% current_user.animals.each do |animal| %>
+        <%= cl_image_tag(animal.photos[0].key,
+          width:300 , height: 300, crop: :fill, class: "mr-3") %>>
+    </div>
+      <h4><%= animal.name %></h4>
+      <p><%= animal.specie %></p>
+    <% end %>
+  <h2>My order</h2>
+
+  <% @orders.each do |order| %>
+    <h3><%= order.animal.name %></h3>
+      <p><%= order.animal.price_per_day %></p>
   <% end %>
-<h2>My order</h2>
-<% @orders.each do |order| %>
-  <h3><%= order.animal.name %></h3>
-    <p><%= order.animal.price_per_day %></p>
-<% end %>
+</div>
