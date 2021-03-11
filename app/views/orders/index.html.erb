@@ -1,0 +1,14 @@
+<div class="margin-150"></div>
+<h1>Bonjour <%= current_user.username %></h1>
+<h2>My animal</h2>
+  <% current_user.animals.each do |animal| %>
+    <%= cl_image_tag(animal.photos[0].key,
+      width:500 , height: 300, crop: :fill) %>
+    <h4><%= animal.name %></h4>
+    <p><%= animal.specie %></p>
+  <% end %>
+<h2>My order</h2>
+<% @orders.each do |order| %>
+  <h3><%= order.animal.name %></h3>
+    <p><%= order.animal.price_per_day %></p>
+<% end %>

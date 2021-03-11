@@ -1,5 +1,6 @@
 class Animal < ApplicationRecord
   belongs_to :user
+  has_many :orders, dependent: :destroy
   has_many_attached :photos
   SPECIES = %w[lapin vegan escargot lama]
   validates :specie, inclusion: { in: SPECIES }
