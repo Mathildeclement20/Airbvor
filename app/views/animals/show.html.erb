@@ -1,18 +1,19 @@
 <div class="container">
   <div class="show-airbvor">
+
       <div class="text-presentation">
         <h3 class="name-species"><strong><%= @animal.name %></strong></h3>
         <p class="description">Espèce: <%= @animal.specie %>- âge : 2 ans - Sexe: male</p>
         <%= @animal.price_per_day %>€/jours
       </div>
 
+  <%#= IMG HERBES  %>
       <img src="https://res.cloudinary.com/df310vkui/image/upload/v1615408656/herbes-08_bbf4ih.png" class="image-gazon1">
   </div>
   <%#= CAROUSSEL  %>
   <div class="show-img" style="position: relative;">
     <p style="font-size: 45px; position: absolute; z-index:5; bottom: 5px; right: 10px;padding: 0px 10px; background-color: #2E5945; opacity: 0.9;">
-
-    </p>
+  </p>
   </div>
   <div class="row mb-5">
     <div id="carousel" class="carousel slide col-7" style="width: 700px; height: 400px" data-ride="carousel" data-interval="5000">
@@ -40,14 +41,15 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+
     <div id="map"
       style="width: 29vw; height: 400px; border-radius: 8px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-
     </div>
   </div>
   <%#= FIN DU CAROUSSEL %>
+
   <div class="animal-description row">
     <div class="animal-text col-6" style= "position: relative;">
       <h4>Description :</h4>
@@ -88,7 +90,7 @@
     <div style="width: 100%; height: 2px; background-color: grey; margin-top: 30px"></div>
   <div class="map"></div>
 
-<%#= ESPACE AUTRE AIRBIVOR %>
+<%#= ESPACE AUTRES AIRBIVORS %>
   <h4 class="mt-4"><strong>D'autres Airbivors 💚</strong></h4>
 
   <div class="cards">
