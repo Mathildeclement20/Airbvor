@@ -1,18 +1,48 @@
 <div class="margin-150"></div>
 <div class="container m-5">
-  <div class="info-profile mt-5 d-flex">
+  <div class="info-profile mt-5 d-flex align-items-center">
      <%= cl_image_tag("7d0rmde6zovr3vpuxkp3odl1y54s", width:150 , height: 150, crop: :fill, radius: "max",style: "border-radius: 50%;") %>
-    <h1>Bonjour <%= current_user.username %></h1>
+    <div class="ml-5">
+      <h1 >Bonjour <%= current_user.username %></h1>
+      <p>Membre depuis <%= current_user.created_at.year %></p>
+    </div>
   </div>
     <h2>My animal</h2>
-    <div class= "img-animal-profil">
+    <div class= "images-animal-profil">
       <% current_user.animals.each do |animal| %>
-        <%= cl_image_tag(animal.photos[0].key,
-          width:300 , height: 300, crop: :fill, class: "mr-3") %>>
+        <div class="image-animal card-category" style="background-image: url('<%= animal.photos[0].url%>')">
+          <h4><%= animal.name %></h4>
+          <p><%= animal.specie %></p>
+        </div>
+      <% end %>
     </div>
-      <h4><%= animal.name %></h4>
-      <p><%= animal.specie %></p>
-    <% end %>
+    <h2>Mes commentaires reçus :</h2>
+  <div class="reviews d-flex row">
+    <div class="review col-5 d-flex">
+      <div class="img-card mr-2">
+        <%= cl_image_tag("7d0rmde6zovr3vpuxkp3odl1y54s", width:80 , height: 80, crop: :fill, radius: "max",style: "border-radius: 50%;") %>
+        <p style="text-align: center;"> <strong> Écrit le: </strong>
+          23/04/2020</p>
+      </div>
+      <div class="text-card">
+        <p> ⭐ ⭐ ⭐ ⭐ ✰</p>
+        <h5>A loué Serge le Lama</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium, sem quis egestas interdum, odio nunc porta metus, sed tristique eros elit rhoncus neque. Sed quis faucibus lectus. Pellentesque tortor nisl, condimentum interdum ligula ut. </p>
+      </div>
+    </div>
+    <div class="review col-5 offset-1 d-flex">
+      <div class="img-card mr-2">
+        <%= cl_image_tag("7d0rmde6zovr3vpuxkp3odl1y54s", width:80 , height: 80, crop: :fill, radius: "max",style: "border-radius: 50%;") %>
+        <p style="text-align: center;"><strong> Écrit le: </strong>
+          23/04/2020</p>
+      </div>
+      <div class="text-card">
+        <p> ⭐ ⭐ ⭐ ☆ ☆</p>
+        <h5>A loué Margot l’escargot et sa smala</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium, sem quis egestas interdum, odio nunc porta metus, sed tristique eros elit rhoncus neque. Sed quis faucibus lectus. Pellentesque tortor nisl, condimentum interdum ligula ut.</p>
+      </div>
+    </div>
+  </div>
   <h2>My order</h2>
 
   <% @orders.each do |order| %>
