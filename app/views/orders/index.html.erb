@@ -1,14 +1,16 @@
 <div class="margin-150"></div>
-<div class="container m-5">
-  <div class="info-profile mt-5 d-flex align-items-center">
+<div class="part1-user">
+  <div style="background-color: white;" class="info-profil d-flex align-items-center">
      <%= cl_image_tag("7d0rmde6zovr3vpuxkp3odl1y54s", width:150 , height: 150, crop: :fill, radius: "max",style: "border-radius: 50%;") %>
+     <%= cl_image_tag("herbes-09_vzwqhz", width:150 , height: 150, crop: :fill, class: "herb") %>
     <div class="ml-5">
       <h1 >Bonjour <%= current_user.username %></h1>
       <p>Membre depuis <%= current_user.created_at.year %></p>
     </div>
   </div>
-    <h2>My animal</h2>
-    <div class= "images-animal-profil">
+  <div class="part2" style="background-color: #ECF2EB;">
+    <h2>Mes animaux Airbivor, à la location:</h2>
+    <div class= "cards" >
       <% current_user.animals.each do |animal| %>
         <div class="image-animal card-category" style="background-image: url('<%= animal.photos[0].url%>')">
           <h4><%= animal.name %></h4>
@@ -16,13 +18,15 @@
         </div>
       <% end %>
     </div>
+  </div>
     <h2>Mes commentaires reçus :</h2>
-  <div class="reviews d-flex row">
+  <div class="reviews d-flex row mb-5">
     <div class="review col-5 d-flex">
       <div class="img-card mr-2">
         <%= cl_image_tag("7d0rmde6zovr3vpuxkp3odl1y54s", width:80 , height: 80, crop: :fill, radius: "max",style: "border-radius: 50%;") %>
         <p style="text-align: center;"> <strong> Écrit le: </strong>
           23/04/2020</p>
+        <%= cl_image_tag("Lama_picto-04_tuh79a", width:80 , height: 60, crop: :fill) %>
       </div>
       <div class="text-card">
         <p> ⭐ ⭐ ⭐ ⭐ ✰</p>
@@ -35,6 +39,7 @@
         <%= cl_image_tag("7d0rmde6zovr3vpuxkp3odl1y54s", width:80 , height: 80, crop: :fill, radius: "max",style: "border-radius: 50%;") %>
         <p style="text-align: center;"><strong> Écrit le: </strong>
           23/04/2020</p>
+        <%= cl_image_tag("escargot_picto-05_fsqlu4", width:80 , height: 75, crop: :fill) %>
       </div>
       <div class="text-card">
         <p> ⭐ ⭐ ⭐ ☆ ☆</p>
@@ -44,9 +49,13 @@
     </div>
   </div>
   <h2>My order</h2>
+  <div class="cards">
+    <% @orders.each do |order| %>
+      <div class="card-category" style="background-image: url('<%= order.animal.photos[0].url%>')">
+        <h3><%= order.animal.name %></h3>
 
-  <% @orders.each do |order| %>
-    <h3><%= order.animal.name %></h3>
-      <p><%= order.animal.price_per_day %></p>
-  <% end %>
+        <p> Total price :<%= order.animal.price_per_day * (order.end_date - order.start_date ).to_i %>€ </p>
+      </div>
+    <% end %>
+  </div>
 </div>
