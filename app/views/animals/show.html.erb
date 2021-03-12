@@ -1,30 +1,26 @@
-<div class="container">
+<!-- <div class="container"> -->
   <div class="show-airbvor">
+    <div class="text-presentation">
+      <h3 class="name-species"><strong><%= @animal.name %></strong></h3>
+      <p class="description">Espèce: <%= @animal.specie %>- âge : 2 ans - Sexe: male</p>
+      <%= @animal.price_per_day %>€/jours
+    </div>
 
-      <div class="text-presentation">
-        <h3 class="name-species"><strong><%= @animal.name %></strong></h3>
-        <p class="description">Espèce: <%= @animal.specie %>- âge : 2 ans - Sexe: male</p>
-        <%= @animal.price_per_day %>€/jours
-      </div>
-
-  <%#= IMG HERBES  %>
+    <%#= IMG HERBES  %>
       <img src="https://res.cloudinary.com/df310vkui/image/upload/v1615408656/herbes-08_bbf4ih.png" class="image-gazon1">
   </div>
+
   <%#= CAROUSSEL  %>
-  <div class="show-img" style="position: relative;">
-    <p style="font-size: 45px; position: absolute; z-index:5; bottom: 5px; right: 10px;padding: 0px 10px; background-color: #2E5945; opacity: 0.9;">
-  </p>
-  </div>
   <div class="row mb-5">
-    <div id="carousel" class="carousel slide col-7" style="width: 700px; height: 400px" data-ride="carousel" data-interval="5000">
+    <div id="carousel" class="carousel slide col-7" style="width: 500px; height: 400px" data-ride="carousel" data-interval="5000">
       <div class="carousel-inner">
         <% @animal.photos.each do |photo| %>
-          <% if @animal.photos.first.key == photo.key %>
+        <% if @animal.photos.first.key == photo.key %>
             <div class="carousel-item active">
               <%= cl_image_tag(photo.key,
               width: 700, height: 400, crop: :fill) %>
             </div>
-          <% else %>
+            <% else %>
             <div class="carousel-item">
               <%= cl_image_tag(photo.key,
               width: 700, height: 400, crop: :fill) %>
@@ -41,94 +37,71 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
+     <%#= MAP %>
     <div id="map"
       style="width: 29vw; height: 400px; border-radius: 8px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-  <%#= FIN DU CAROUSSEL %>
 
+  <%#= FIN DU CAROUSSEL %>
   <div class="animal-description row">
     <div class="animal-text col-6" style= "position: relative;">
       <h4>Description :</h4>
       <p style="text-align: justify;"><%= @animal.description %> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dignissimos necessitatibus, rerum accusantium aliquid quia repellat quas itaque veritatis iure minus. Distinctio numquam excepturi nobis sapiente nulla ex in delectus.
-      Animi possimus autem ducimus iure maiores asperiores sapiente officia illo corporis? Ratione, ad eligendi doloribus provident consequuntur odio molestias minima perferendis est obcaecati exercitationem consequatur veritatis culpa nostrum voluptatem sapiente!
+        Animi possimus autem ducimus iure maiores asperiores sapiente officia illo corporis? Ratione, ad eligendi doloribus provident consequuntur odio molestias minima perferendis est obcaecati exercitationem consequatur veritatis culpa nostrum voluptatem sapiente!
       Dignissimos magnam distinctio molestias facilis earum eos aut, asperiores eius culpa, suscipit alias vel fugit quibusdam deserunt quaerat omnis laboriosam saepe cum autem consequuntur fuga mollitia, vitae quam quo. Totam.</p>
     </div>
     <div class="col-1"></div>
-    <div class="col-5">
-      <div class="form-disponibility">
-        <h4><strong>Ajouter des dates pour voir le prix </strong></h4>
-        <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
+    <!-- <div class="col-5"> -->
+    <div class="form-disponibility">
+      <h4><strong>Ajouter des dates pour voir le prix </strong></h4>
+      <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
         <%= simple_form_for([@animal, @order ]) do |f| %>
-          <%= f.date_field :start_date, class:"form-control mb-2", placeholder: "Date de début" %>
-          <%= f.date_field :end_date, class: "form-control mb-2", label: "Date de début"%>
-          <%= f.submit class: "my-button", value: "Vérifier les disponibilités" %>
+        <%= f.date_field :start_date, class:"form-control mb-2", placeholder: "Date de début" %>
+        <%= f.date_field :end_date, class: "form-control mb-2", label: "Date de début"%>
+        <%= f.submit class: "my-button", value: "Vérifier les disponibilités" %>
         <% end %>
-        </end>
-        <%#
-        <form action="" method="post">
-          <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
-            <input type="number" placeholder="Nombres de jours" class="form-control mb-2" id="">
-            <input type="date" name="start_date" id="" class="mb-2">
-            <input  type="submit" value="Vérifier les disponibilités" class="my-button">
-          </div>
-        </form>
-        %>
       </div>
     </div>
   </div>
+  <!-- <form action="" method="post">
+    <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
+      <input type="number" placeholder="Nombres de jours" class="form-control mb-2" id="">
+      <input type="date" name="start_date" id="" class="mb-2">
+      <input  type="submit" value="Vérifier les disponibilités" class="my-button">
+    </div>
+  </form> -->
 
   <%#= ESPACE COMMENTAIRES %>
   <div style="width: 100%; height: 2px; background-color: grey; margin-top: 30px"></div>
   <h4 style="margin-top: 35px"><strong>Aucun commentaire (pour l'instant)</strong></h4>
   <div class="info-review">
     <!-- <div class= "col-6 row mt-5 d-flex align-items-center"> -->
-      <div class="lapin">
-        <img class="image-lapin" src="https://res.cloudinary.com/df310vkui/image/upload/v1615390831/Lapin_picto-01_yx4vd7.png" alt="pictogramme d'un lapin">
-        <p class="col-8" style="padding: 0px;">Cet hôte a 81 commentaires concernant d'autres airbivor. Afficher d'autres commentaires.</p>
-      </div>
-    <!-- <div class= "col-6 row mt-5 d-flex align-items-center"> -->
-      <div class="goutte">
-        <img class="image-goutte" src="https://res.cloudinary.com/df310vkui/image/upload/v1615390845/bave_picto-03_ajqnfe.png" alt="pictogramme de goutte d'eau">
-        <p class="text-goutte"> Nous sommes là pour vous aider. Chaque réservation est couverte par la bave de Karlo et la glaire de Serge.</p>
-      </div>
+    <div class="lapin">
+      <img class="image-lapin" src="https://res.cloudinary.com/df310vkui/image/upload/v1615390831/Lapin_picto-01_yx4vd7.png" alt="pictogramme d'un lapin">
+      <p class="col-8" style="padding: 0px;">Cet hôte a 81 commentaires concernant d'autres airbivor. Afficher d'autres commentaires.</p>
     </div>
-    <div style="width: 100%; height: 2px; background-color: grey; margin-top: 30px"></div>
+    <!-- <div class= "col-6 row mt-5 d-flex align-items-center"> -->
+    <div class="goutte">
+      <img class="image-goutte" src="https://res.cloudinary.com/df310vkui/image/upload/v1615390845/bave_picto-03_ajqnfe.png" alt="pictogramme de goutte d'eau">
+      <p class="text-goutte"> Nous sommes là pour vous aider. Chaque réservation est couverte par la bave de Karlo et la glaire de Serge.</p>
+    </div>
+  </div>
+  <div style="width: 100%; height: 2px; background-color: grey; margin-top: 30px"></div>
   <div class="map"></div>
 
-<%#= ESPACE AUTRES AIRBIVORS %>
+  <%#= ESPACE AUTRES AIRBIVORS %>
   <h4 class="mt-4"><strong>D'autres Airbivors 💚</strong></h4>
-
   <div class="cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/df310vkui/image/upload/v1615490353/Fashion-Llama-Paul-Fuentes-Impression-sur-toile_ctazqn.webp)">
       Les Lamas
     </div>
-
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/df310vkui/image/upload/v1615490452/escargots-02_ALTERN03_xb1dqx.jpg)">
       Les Escargots
     </div>
-
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/df310vkui/image/upload/v1615490552/min_image_ha4diy.jpg)">
       Les Vegans
     </div>
-
   </div>
-
- <div class="cards mt-3">
-    <% @animals.each do |animal| %>
-      <% unless animal.id == @animal.id %>
-        <%= link_to animal_path(animal) do  %>
-          <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= animal.image_url%>')">
-            <%= animal.name %> -->
-          </div>
-        <% end %>
-      <% end %>
-    <% end %>
-  </div>
-
-
-
-</div>

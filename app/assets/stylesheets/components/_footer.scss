@@ -1,4 +1,6 @@
 footer {
+  position: absolute;
+  bottom: 0px;
   width: 100%;
   color: #0D0D0D;
   background: #E4ECE4;
@@ -25,7 +27,7 @@ footer a {
   width: 20%;
   margin: 0 10px;
   padding: auto;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
 }
 
 .footer-about h3,
@@ -76,6 +78,7 @@ footer a {
   height: 100px;
   left: 15px;
   bottom: 0;
+  bottom: 0px;
 }
 
 #grass-footer-right {
@@ -83,7 +86,7 @@ footer a {
   width: 100px;
   height: 150px;
   right: 15px;
-  bottom: 0;
+  bottom: 0px;
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
@@ -106,6 +109,7 @@ footer a {
 	footer { position: static; }
 }
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
   footer { position: static; }
 }
+
