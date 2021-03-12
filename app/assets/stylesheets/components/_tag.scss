@@ -2,7 +2,7 @@
   background-color:  #E4ECE4;
   color: #2E5945;
   border-radius: 25px;
-  border: 1px inset #2E5945;
+  // border: 1px inset #2E5945;
 
   &:hover{
     transition: 0.5s;
@@ -11,6 +11,6 @@
     box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
     webkit-box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
     moz-box-shadow: 9px 4px 19px -10px rgba(0,0,0,0.55);
-    border: 1px solid #2E5945;
+    // border: 1px solid #2E5945;
   }
 }
