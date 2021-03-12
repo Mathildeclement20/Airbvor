@@ -41,7 +41,6 @@ Animal.last.photos.attach(io: file, filename: "rabbit3.jpg", content_type: 'imag
 Animal.create!(
   user: User.find_by(username: "Jéremy"),
   specie:"vegan",
-  address:"",
   image_url:"https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg",
   name: "Pomme",
   description: "Pomme est une vegane accomplie, brouter est sa destinée.",
