@@ -23,7 +23,7 @@ User.create!(
   password: "password"
 )
 Animal.create!(
-  user: User.find_by(username: "Mathou"),
+  user: User.find_by(username: "Yanis"),
   specie: "lapin",
   image_url: "https://static.teteamodeler.com/media/cache/thumb_400/lalimentation-du-lapin-.jpeg",
   name: "Jacob",
@@ -56,7 +56,7 @@ file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-
 Animal.last.photos.attach(io: file, filename: "vegan3.jpg", content_type: 'image/jpg' )
 
 Animal.create!(
-  user: User.find_by(username: "Yanis"),
+  user: User.find_by(username: "Mathou"),
   specie: "escargot",
   image_url: "https://tse2.mm.bing.net/th?id=OIP.IJjzbq9zVI7JzpVY3vEweQHaD3&pid=Api&P=0&w=525&h=571",
   name: "Karlo",
@@ -68,7 +68,7 @@ file = URI.open("https://tse2.mm.bing.net/th?id=OIP.IJjzbq9zVI7JzpVY3vEweQHaD3&p
 Animal.last.photos.attach(io: file, filename: "escargot1.jpg", content_type: 'image/jpg' )
 
 Animal.create!(
-  user: User.find_by(username: "Seryl"),
+  user: User.find_by(username: "Mathou"),
   specie: "lama",
   image_url: "https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg",
   name: "Serge",
