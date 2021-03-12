@@ -86,7 +86,26 @@ footer a {
   bottom: 15px;
 }
 
+
+@media (min-width: 100px) and (max-width: 575px) {
+  footer { position: static; }
+}
+
+@media (min-width: 576px) {
+  footer { position: static; }
+}
+
+@media (min-width: 768px) {
+  footer { position: static; }
+}
+
+@media (min-width: 992px) {
+  footer { position: static; }
+  
 @media (max-height:800px){
 	footer { position: static; }
 }
 
+@media (min-width: 1200px) {
+  footer { position: static; }
+}
