@@ -1,7 +1,16 @@
 .container {
   width: 100vw;
 }
-
+.animal-description{
+  display: flex;
+  flex-direction: row;
+  background-color: #E4ECE4;
+  padding: 40px 0 40px 40px
+}
+.form-disponibility{
+  height: 300px;
+  margin-left: 60px;
+}
 .show-airbvor {
   position: relative;
   justify-content: space-between;
@@ -28,15 +37,16 @@
 .info-review {
   display: flex;
   justify-content:space-around;
-
+  padding-left: 50px;
+  align-items: center;
 }
 
 .goutte {
   display: flex;
+  width: 50%;
 }
 
 .text-goutte {
-  text-align: left;
   flex: 1;
   font-size: 16px;
 
@@ -53,6 +63,8 @@ vertical-align:middle;
 
 .lapin {
   display: flex;
+  width: 50%;
+
 }
 
 .text-lapin {
