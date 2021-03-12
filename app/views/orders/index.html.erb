@@ -14,9 +14,11 @@
     <h2>Mes animaux Airbivor, à la location:</h2>
     <div class= "cards" >
       <% current_user.animals.each do |animal| %>
-        <div class=" card-category " style="background-image: url('<%= animal.photos[0].url%>')">
-          <%= animal.name %>
-          <p><%= animal.specie %></p>
+        <div class=" card-category" id="account-animal" style="background-image: url('<%= animal.photos[0].url%>')">
+          <div class="hidden">
+            <p><%= animal.name %> </p><hr>
+            <p> <%= animal.specie %></p>
+          </div>
         <% if animal.orders.first %>
           <p class="btn btn-primary" action="orders/pending"><%= animal.orders[0].status  %></p>
         <% end %>

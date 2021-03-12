@@ -7,7 +7,7 @@
   position: relative;
   margin-bottom: 0px;
   display: flex;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 .herb{
   position: absolute;
@@ -15,7 +15,8 @@
   right: 250px;
 }
 .part2{
-  padding: 30px 0px 70px 50px;
+  padding: 30px 0px 70px 100px;
+  // margin-left: 100px;
   position: relative;
   background-color: #DDDDDD;
   .herb2{
@@ -25,6 +26,15 @@
   }
   .image-animal{
     width: 200px;
+
+  }
+  .card-category{
+
+    &:hover{
+      transition: 0.5s;
+      filter: contrast(40%);
+      cursor: pointer;
+    }
   }
 }
 .img_animal{
@@ -33,13 +43,16 @@
   padding: 30px 0;
   background-color: #E0EBE6;
   .wrap3{
-    margin-left: 50px;
+    margin-left: 100px;
   }
 }
 .reviews{
   width: 100%;
 }
 .part-4{
-  margin-left: 50px;
+  margin-left: 100px;
   background-color: #F4F4F4;
+}
+.hidden{
+  display: none;
 }

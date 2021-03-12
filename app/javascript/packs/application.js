@@ -27,7 +27,16 @@ import { updateSearchbarOnScroll } from '../plugins/search-bar'
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-
+  const accountImg = document.querySelector('#account-animal');
+  const hidden = document.querySelector('.hidden')
+  if  (accountImg) {
+    accountImg.addEventListener('mouseover', (e)=>{
+      hidden.classList.remove("hidden")
+    });
+    accountImg.addEventListener('mouseout', (e)=>{
+      hidden.classList.add("hidden")
+    });
+  }
   updateSearchbarOnScroll();
   initMapbox();
   // Call your functions here, e.g:

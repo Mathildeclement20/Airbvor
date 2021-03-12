@@ -101,6 +101,9 @@ footer a {
 
 @media (min-width: 992px) {
   footer { position: static; }
+  
+@media (max-height:800px){
+	footer { position: static; }
 }
 
 @media (min-width: 1200px) {
