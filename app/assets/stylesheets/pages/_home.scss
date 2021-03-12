@@ -29,10 +29,11 @@ height: 700px;
 }
 
 .full-width {
-  background: #ECF2EB;
+  background: white;
 }
 
 .text {
+  position: relative;
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
@@ -48,6 +49,46 @@ height: 700px;
 .text p {
   margin: auto;
   max-width: 800px;
+}
+
+#grass-text-left {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  left: 5px;
+  bottom: 0px;
+}
+
+#grass-text-right {
+  position: absolute;
+  width: 180px;
+  height: 300px;
+  right: 15px;
+  bottom: 0px;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  text { position: static; }
+}
+
+@media (min-width: 576px) {
+  text { position: static; }
+}
+
+@media (min-width: 768px) {
+  text { position: static; }
+}
+
+@media (min-width: 992px) {
+  text { position: static; }
+}
+
+@media (max-height: 800px) {
+	text { position: static; }
+}
+
+@media (min-width: 1200px) { 
+  text { position: static; }
 }
 
 .margin-constraint {
