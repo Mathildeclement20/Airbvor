@@ -23,9 +23,12 @@ import "bootstrap";
 
 // Internal imports, e.g:
 import { initMapbox } from '../plugins/init_mapbox';
+import { updateSearchbarOnScroll } from '../plugins/search-bar'
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+
+  updateSearchbarOnScroll();
   initMapbox();
   // Call your functions here, e.g:
   // initSelect2();

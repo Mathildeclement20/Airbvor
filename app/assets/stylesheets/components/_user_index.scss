@@ -1,8 +1,13 @@
+.part-1{
+  background-color: #E5E5E5;;
+}
 .info-profil{
-  width: 100vw;
+  // width: 100vw;
   padding: 50px 0px;
   position: relative;
   margin-bottom: 0px;
+  display: flex;
+  margin-left: 50px;
 }
 .herb{
   position: absolute;
@@ -10,5 +15,31 @@
   right: 250px;
 }
 .part2{
-  padding: 40px 0px 30px 0px;
+  padding: 30px 0px 70px 50px;
+  position: relative;
+  background-color: #DDDDDD;
+  .herb2{
+    position: absolute;
+    bottom: -35px;
+    left: 0px;
+  }
+  .image-animal{
+    width: 200px;
+  }
+}
+.img_animal{
+}
+.part-3{
+  padding: 30px 0;
+  background-color: #E0EBE6;
+  .wrap3{
+    margin-left: 50px;
+  }
+}
+.reviews{
+  width: 100%;
+}
+.part-4{
+  margin-left: 50px;
+  background-color: #F4F4F4;
 }

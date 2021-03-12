@@ -1,3 +1,5 @@
-<img src="<%= animal.photos.first.url%>" style='width: 100px'" />
-<h2><%= animal.name %></h2>
-<p><%= animal.address %></p>
+<div class="card" style= "background-image: url(<%=animal.photos.first.url %>); background-size: cover; color: white; background-repeat: no-repeat;" >
+  <h2><%= animal.name %></h2>
+  <p><%= animal.address %></p>
+  <p><%= animal.price_per_day %>€/jour</p>
+</div>

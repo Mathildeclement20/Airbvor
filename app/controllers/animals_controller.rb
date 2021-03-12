@@ -10,6 +10,7 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     @animals = Animal.where(specie: @animal.specie).limit(4)
     set_markers
+    @order = Order.new
   end
 
   def find

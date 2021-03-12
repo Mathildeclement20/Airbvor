@@ -5,6 +5,7 @@
   background-color: #2E5945;
   width: 60%;
   height: 70px;
+  transition: 0.5s;
   border-radius: 36px;
   z-index: 10;
   margin-top: 10px;
@@ -76,4 +77,14 @@
 .margin-150{
   margin-top: 150px;
 
+}
+.search-bar-hidden {
+  // [...]
+  opacity: 0.5;
+  transition: 0.5s;
+  top: 0px;
+  &:hover{
+    transition: 0.5s opacity ease;
+    opacity: 1;
+  }
 }
