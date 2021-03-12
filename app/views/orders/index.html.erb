@@ -18,7 +18,10 @@
           <%= animal.name %>
           <p><%= animal.specie %></p>
         <% if animal.orders.first %>
-          <p class="btn btn-primary" action="orders/pending"><%= animal.orders[0].status  %></p>
+          <%= form_tag orders_path, remote: true ,method: :post do %>
+            <%= submit_tag "Search", class: "btn btn-primary", value: animal.orders[0].status  %>
+          <%#<p class="btn btn-primary" action="orders/pending"><%= animal.orders[0].status  </p>%>
+          <% end %>
         <% end %>
         </div>
       <% end %>
