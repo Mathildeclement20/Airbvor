@@ -18,8 +18,8 @@ const addMarkersToMap = (map, markers) => {
       element.className = 'marker';
       element.style.backgroundImage = "url(https://res.cloudinary.com/df310vkui/image/upload/v1615548380/marker_airbvor_Plan_de_travail_1_copie_2_z5d7yj.png)";
       element.style.backgroundSize = 'contain';
-      element.style.width = '40px';
-      element.style.height = '30px';
+      element.style.width = '60px';
+      element.style.height = '60px';
     new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
