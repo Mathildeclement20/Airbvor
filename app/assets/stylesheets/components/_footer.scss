@@ -88,7 +88,6 @@ footer a {
   bottom: 0px;
 }
 
-
 @media (min-width: 100px) and (max-width: 575px) {
   footer { position: static; }
 }
@@ -103,12 +102,13 @@ footer a {
 
 @media (min-width: 992px) {
   footer { position: static; }
-  
-@media (max-height:800px){
+}
+
+@media (max-height: 800px) {
 	footer { position: static; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) { 
   footer { position: static; }
 }
 }
