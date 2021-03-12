@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container"> -->
   <div class="show-airbvor">
     <div class="text-presentation">
       <h3 class="name-species"><strong><%= @animal.name %></strong></h3>
@@ -7,29 +7,25 @@
     </div>
 
     <%#= IMG HERBES  %>
-    <img src="https://res.cloudinary.com/df310vkui/image/upload/v1615408656/herbes-08_bbf4ih.png" class="image-gazon1">
+      <img src="https://res.cloudinary.com/df310vkui/image/upload/v1615408656/herbes-08_bbf4ih.png" class="image-gazon1">
   </div>
 
   <%#= CAROUSSEL  %>
-  <div class="show-img" style="position: relative;">
-    <p style="font-size: 45px; position: absolute; z-index:5; bottom: 5px; right: 10px;padding: 0px 10px; background-color: #2E5945; opacity: 0.9;">
-    </p>
-  </div>
   <div class="row mb-5">
-    <div id="carousel" class="carousel slide col-7" style="width: 700px; height: 400px" data-ride="carousel" data-interval="5000">
+    <div id="carousel" class="carousel slide col-7" style="width: 500px; height: 400px" data-ride="carousel" data-interval="5000">
       <div class="carousel-inner">
         <% @animal.photos.each do |photo| %>
         <% if @animal.photos.first.key == photo.key %>
-        <div class="carousel-item active">
-          <%= cl_image_tag(photo.key,
-          width: 700, height: 400, crop: :fill) %>
-        </div>
-        <% else %>
-        <div class="carousel-item">
-          <%= cl_image_tag(photo.key,
-          width: 700, height: 400, crop: :fill) %>
-        </div>
-        <% end %>
+            <div class="carousel-item active">
+              <%= cl_image_tag(photo.key,
+              width: 700, height: 400, crop: :fill) %>
+            </div>
+            <% else %>
+            <div class="carousel-item">
+              <%= cl_image_tag(photo.key,
+              width: 700, height: 400, crop: :fill) %>
+            </div>
+          <% end %>
         <% end %>
       </div>
       <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
@@ -109,15 +105,3 @@
       Les Vegans
     </div>
   </div>
-  <div class="cards mt-3">
-    <% @animals.each do |animal| %>
-    <% unless animal.id == @animal.id %>
-    <%= link_to animal_path(animal) do  %>
-    <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= animal.image_url%>')">
-      <%= animal.name %> -->
-    </div>
-    <% end %>
-    <% end %>
-    <% end %>
-  </div>
-</div>
