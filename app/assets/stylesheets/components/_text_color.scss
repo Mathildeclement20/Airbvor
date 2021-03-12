@@ -1,0 +1,14 @@
+h1 {
+  color: #2E5945;
+  font-style: Roboto;
+  font-size: 49;
+}
+
+a {
+  // text-decoration: none;
+  color: #2E5945;
+  &:hover{
+      text-decoration: none;
+      color: #214031;
+  }
+}
