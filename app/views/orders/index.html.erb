@@ -19,9 +19,6 @@
             <p><%= animal.name %> </p><hr>
             <p> <%= animal.specie %></p>
           </div>
-        <% if animal.orders.first %>
-          <p class="btn btn-primary" action="orders/pending"><%= animal.orders[0].status  %></p>
-        <% end %>
         </div>
       <% end %>
     </div>

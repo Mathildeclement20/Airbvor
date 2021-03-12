@@ -26,12 +26,12 @@
   padding: 10px 10px;
 }
 
-.nav-item a {
-  text-decoration: none;
+.navbar-align{
   color: #2E5945;
-
-    &:hover {
-      color: #F2A172;
-    }
+  font-weight: bold;
+  margin-right: 20px;
+  &:hover {
+    color: #214031;
+    text-decoration: none;
+  }
 }
-
