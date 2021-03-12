@@ -1,4 +1,4 @@
-<div class="container">
+<div class="full-width">
   <div class="margin-100"></div>
   <h1>Les animaux Airbvor</h1>
   <p>Disponible à partir de: 12/03/2021 pendant une durée de 2 jours</p>
@@ -32,17 +32,19 @@
             </div>
           <% end %>
         <% end %>
-        <div class="container">
-          <i class="fas fa-chevron-left pt-2 arrow"></i>
-          <% (1..4).each do |number| %>
-            <%= link_to number, "#" %>
-          <% end %>
-          .... <%= link_to 7, "#" %>
-          <i class="fas fa-chevron-right pt-2 arrow"></i>
+        <div class="full-width">
+          <div class="saloperie">
+            <i class="fas fa-chevron-left pt-2 arrow"></i>
+            <% (1..4).each do |number| %>
+              <%= link_to number, "#" %>
+            <% end %>
+            .... <%= link_to 7, "#" %>
+            <i class="fas fa-chevron-right pt-2 arrow"></i>
+          </div>
         </div>
     </div>
     <div id="map" class="mt-3 mr-4"
-      style="width: 37vw; height: 99vh;"
+      style="width: 47vw; height: 99vh;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
