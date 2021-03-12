@@ -11,7 +11,7 @@
   </div>
 
   <%#= CAROUSSEL  %>
-  <div class="row mb-5">
+  <div class="row ml-4">
     <div id="carousel" class="carousel slide col-7" style="width: 500px; height: 400px" data-ride="carousel" data-interval="3000">
       <div class="carousel-inner">
         <% @animal.photos.each do |photo| %>
@@ -53,9 +53,8 @@
         Animi possimus autem ducimus iure maiores asperiores sapiente officia illo corporis? Ratione, ad eligendi doloribus provident consequuntur odio molestias minima perferendis est obcaecati exercitationem consequatur veritatis culpa nostrum voluptatem sapiente!
       Dignissimos magnam distinctio molestias facilis earum eos aut, asperiores eius culpa, suscipit alias vel fugit quibusdam deserunt quaerat omnis laboriosam saepe cum autem consequuntur fuga mollitia, vitae quam quo. Totam.</p>
     </div>
-    <div class="col-1"></div>
     <!-- <div class="col-5"> -->
-    <div class="form-disponibility">
+    <div class="form-disponibility col-4">
       <h4><strong>Ajouter des dates pour voir le prix </strong></h4>
       <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
         <%= simple_form_for([@animal, @order ]) do |f| %>
@@ -66,26 +65,17 @@
       </div>
     </div>
   </div>
-  <!-- <form action="" method="post">
-    <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
-      <input type="number" placeholder="Nombres de jours" class="form-control mb-2" id="">
-      <input type="date" name="start_date" id="" class="mb-2">
-      <input  type="submit" value="Vérifier les disponibilités" class="my-button">
-    </div>
-  </form> -->
-
   <%#= ESPACE COMMENTAIRES %>
-  <div style="width: 100%; height: 2px; background-color: grey; margin-top: 30px"></div>
-  <h4 style="margin-top: 35px"><strong>Aucun commentaire (pour l'instant)</strong></h4>
+  <h4 style="margin: 50px 0 0 50px;"><strong>Aucun commentaire (pour l'instant)</strong></h4>
   <div class="info-review">
     <!-- <div class= "col-6 row mt-5 d-flex align-items-center"> -->
     <div class="lapin">
-      <img class="image-lapin" src="https://res.cloudinary.com/df310vkui/image/upload/v1615390831/Lapin_picto-01_yx4vd7.png" alt="pictogramme d'un lapin">
+      <%= cl_image_tag("Lapin_picto-01_yx4vd7", width: 110, height: 110, crop: :fill) %>
       <p class="col-8" style="padding: 0px;">Cet hôte a 81 commentaires concernant d'autres airbivor. Afficher d'autres commentaires.</p>
     </div>
     <!-- <div class= "col-6 row mt-5 d-flex align-items-center"> -->
     <div class="goutte">
-      <img class="image-goutte" src="https://res.cloudinary.com/df310vkui/image/upload/v1615390845/bave_picto-03_ajqnfe.png" alt="pictogramme de goutte d'eau">
+      <%= cl_image_tag("bave_picto-03_ajqnfe", width: 110, height: 110, crop: :fill) %>
       <p class="text-goutte"> Nous sommes là pour vous aider. Chaque réservation est couverte par la bave de Karlo et la glaire de Serge.</p>
     </div>
   </div>
@@ -93,8 +83,8 @@
   <div class="map"></div>
 
   <%#= ESPACE AUTRES AIRBIVORS %>
-  <h4 class="mt-4"><strong>D'autres Airbivors 💚</strong></h4>
-  <div class="cards">
+  <h4 class="mt-4 ml-5"><strong>D'autres Airbivors 💚</strong></h4>
+  <div class="cards ml-5">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/df310vkui/image/upload/v1615490353/Fashion-Llama-Paul-Fuentes-Impression-sur-toile_ctazqn.webp)">
       Les Lamas
     </div>
