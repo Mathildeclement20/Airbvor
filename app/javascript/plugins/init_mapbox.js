@@ -16,10 +16,10 @@ const addMarkersToMap = (map, markers) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
     const element = document.createElement('div');
       element.className = 'marker';
-      element.style.backgroundImage = `url(${marker.image_url})`;
+      element.style.backgroundImage = `url(https://res.cloudinary.com/df310vkui/image/upload/v1615497192/Logo_symbol_airbvor_Plan_de_travail_1_copie_2_r1jhba_w9h8sm.png)`;
       element.style.backgroundSize = 'contain';
-      element.style.width = '25px';
-      element.style.height = '25px';
+      element.style.width = '40px';
+      element.style.height = '30px';
     new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
@@ -41,7 +41,7 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
+    // map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
   }
 };
 

@@ -61,13 +61,22 @@
     <div class="col-5">
       <div class="form-disponibility">
         <h4><strong>Ajouter des dates pour voir le prix </strong></h4>
-        <form action="" method="get">
+        <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
+        <%= simple_form_for([@animal, @order ]) do |f| %>
+          <%= f.date_field :start_date, class:"form-control mb-2", placeholder: "Date de début" %>
+          <%= f.date_field :end_date, class: "form-control mb-2", label: "Date de début"%>
+          <%= f.submit class: "my-button", value: "Vérifier les disponibilités" %>
+        <% end %>
+        </end>
+        <%#
+        <form action="" method="post">
           <div class= "d-flex  justify-content-center flex-column col-10 offset-1 pb-5">
             <input type="number" placeholder="Nombres de jours" class="form-control mb-2" id="">
-            <input type="date" name="" id="" class="mb-2">
+            <input type="date" name="start_date" id="" class="mb-2">
             <input  type="submit" value="Vérifier les disponibilités" class="my-button">
           </div>
         </form>
+        %>
       </div>
     </div>
   </div>
