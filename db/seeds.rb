@@ -23,7 +23,7 @@ User.create!(
   password: "password"
 )
 Animal.create!(
-  user: User.find_by(username: "Mathou"),
+  user: User.find_by(username: "Yanis"),
   specie: "lapin",
   image_url: "https://static.teteamodeler.com/media/cache/thumb_400/lalimentation-du-lapin-.jpeg",
   name: "Jacob",
@@ -50,13 +50,13 @@ Animal.create!(
 
 file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg")
 Animal.last.photos.attach(io: file, filename: "vegan1.jpg", content_type: 'image/jpg' )
-file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg")
+file = URI.open("https://res.cloudinary.com/df310vkui/image/upload/v1615558756/apple-1122537_1920_qaz5qn.jpg")
 Animal.last.photos.attach(io: file, filename: "vegan2.jpg", content_type: 'image/jpg' )
-file = URI.open("https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg")
+file = URI.open("https://res.cloudinary.com/df310vkui/image/upload/v1615559243/the-old-lady-3503684_1920_b52h8f.jpg")
 Animal.last.photos.attach(io: file, filename: "vegan3.jpg", content_type: 'image/jpg' )
 
 Animal.create!(
-  user: User.find_by(username: "Yanis"),
+  user: User.find_by(username: "Mathou"),
   specie: "escargot",
   image_url: "https://tse2.mm.bing.net/th?id=OIP.IJjzbq9zVI7JzpVY3vEweQHaD3&pid=Api&P=0&w=525&h=571",
   name: "Karlo",
@@ -68,7 +68,7 @@ file = URI.open("https://tse2.mm.bing.net/th?id=OIP.IJjzbq9zVI7JzpVY3vEweQHaD3&p
 Animal.last.photos.attach(io: file, filename: "escargot1.jpg", content_type: 'image/jpg' )
 
 Animal.create!(
-  user: User.find_by(username: "Seryl"),
+  user: User.find_by(username: "Mathou"),
   specie: "lama",
   image_url: "https://reductress.com/wp-content/uploads/2014/07/woman-eating-apple.jpg",
   name: "Serge",

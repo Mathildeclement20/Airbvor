@@ -78,7 +78,7 @@ footer a {
   height: 100px;
   left: 15px;
   bottom: 0;
-  bottom: 0px;
+  bottom: -10px;
 }
 
 #grass-footer-right {
@@ -86,7 +86,7 @@ footer a {
   width: 100px;
   height: 150px;
   right: 15px;
-  bottom: 0px;
+  bottom: -3px;
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
@@ -112,4 +112,3 @@ footer a {
 @media (min-width: 1200px) {
   footer { position: static; }
 }
-
