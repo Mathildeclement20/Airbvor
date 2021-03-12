@@ -1,11 +1,12 @@
 
 <div class="part1-user">
   <div  class="info-profil">
-     <%= cl_image_tag("7d0rmde6zovr3vpuxkp3odl1y54s", width:150 , height: 150, crop: :fill, class: "img_animal",radius: "max",style: "border-radius: 50%;") %>
-     <%= cl_image_tag("herbes-09_vzwqhz", width:150 , height: 150, crop: :fill, class: "herb") %>
+     <%= cl_image_tag("aad1f35f579e75f27f5c8ef7ee9d0193--primates-self-portraits_rlypmj", width:150 , height: 150, crop: :fill, class: "img_animal",radius: "max",style: "border-radius: 50%;") %>
+     <%= cl_image_tag("herbes-09_vzwqhz", width:270 , height: 270, crop: :fill, class: "herb") %>
     <div class="ml-5">
       <h1 >Bonjour <%= current_user.username %></h1>
       <p>Membre depuis <%= current_user.created_at.year %></p>
+      <%= link_to "Modifier le profil"  %>
     </div>
   </div>
 </div>
@@ -67,7 +68,7 @@
             <div>
               <h2>Nom: <%= order.animal.name %></h2>
               <h3>Proprio: <%= order.animal.user.username%></h3> 
-              <small class="card-trip-pricing">Total price :<%= order.animal.price_per_day * (order.end_date - order.start_date ).to_i %>€ </small>
+              <small class="card-trip-pricing">Total price: <%= order.animal.price_per_day * (order.end_date - order.start_date ).to_i %>€ </small>
             </div>
           </div>
         </div>

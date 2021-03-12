@@ -12,7 +12,7 @@
 
   <%#= CAROUSSEL  %>
   <div class="row mb-5">
-    <div id="carousel" class="carousel slide col-7" style="width: 500px; height: 400px" data-ride="carousel" data-interval="5000">
+    <div id="carousel" class="carousel slide col-7" style="width: 500px; height: 400px" data-ride="carousel" data-interval="3000">
       <div class="carousel-inner">
         <% @animal.photos.each do |photo| %>
         <% if @animal.photos.first.key == photo.key %>
